@@ -4,75 +4,136 @@ const caixaAlternativas = document.querySelector(".caixa-alternativa");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
-cosnt perguntas =[
+const perguntas =[
     {
-     enunciado: "Qual desses dois jogos você prefere", 
+     enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
-    "Minecraft", 
-    "Fortinite"
+   
+    {
+      text:  "Minecraft",
+      afirmacao: "afirmacao"
+    },
+    { 
+      text: "Fortnite", 
+      afirmacao: "afirmacao"
+    }
 ]
    },
    {
-     enunciado: "Qual desses dois jogos você prefere", 
+     enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
-    "Roblox", 
-    "Among us"
+     {text:  "Roblox",
+      afirmacao: "afirmacao"
+      },
+      { 
+      text: "Among us", 
+      afirmacao: "afirmacao"
+    }
 ]
     },
     {
-     enunciado: "Qual desses dois jogos você prefere", 
+     enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
-    "Call of Duty", 
-    "Free Fire"
+     { 
+      text: "Call Of Dutty", 
+      afirmacao: "afirmacao"
+    },
+    { 
+      text: "Free Fire", 
+      afirmacao: "afirmacao"
+    }
 ]
     },
     {
-      enunciado: "Qual desses dois jogos você prefere", 
+      enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
-    "Legue Of Legends", 
-    "Mobile Legends"
+    { 
+      text: "Legue Of Legends", 
+      afirmacao: "afirmacao"
+    },
+     { 
+      text: "Mobile Legends", 
+      afirmacao: "afirmacao"
+    }
 ]
     },
     {
-      enunciado: "Qual desses dois jogos você prefere", 
+      enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
-    "Crash Bandicoot", 
-    "Cuphead"
+     { 
+      text: "Crash Bandicoot", 
+      afirmacao: "afirmacao"
+    },
+    { 
+      text: "Cuphead", 
+      afirmacao: "afirmacao"
+    }
 ]
     },
     {
-      enunciado: "Qual desses dois jogos você prefere", 
+      enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
-    "Candy Crush Saga", 
-    "The Sims"
+     { 
+      text: "Candy Crush Saga", 
+      afirmacao: "afirmacao"
+    }, 
+     { 
+      text: "The Sims", 
+      afirmacao: "afirmacao"
+    }
 ]
     },
     {
-      enunciado: "Qual desses dois jogos você prefere", 
+      enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
-    "Mortal Combat", 
-    "Street Fighter"
+     { 
+      text: "Mortal Combat", 
+      afirmacao: "afirmacao"
+    },
+     { 
+      text: "Street Fighter", 
+      afirmacao: "afirmacao"
+    }
+  ]
+    },
+    {
+      enunciado: "Qual desses dois jogos você prefere?", 
+   alternativas:[
+     { 
+      text: "Super Mario Bros", 
+      afirmacao: "afirmacao"
+    },
+     { 
+      text: "Sonic The Hedgehog", 
+      afirmacao: "afirmacao"
+    }
 ]
     },
     {
-      enunciado: "Qual desses dois jogos você prefere", 
+      enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
-    "Super Mario Bros", 
-    "Sonic the Hedgehog"
+     { 
+      text: "Forza Horizon", 
+      afirmacao: "afirmacao"
+    },
+     { 
+      text: "Grad Theft Auto V/GTA", 
+      afirmacao: "afirmacao"
+    }
 ]
     },
     {
-      enunciado: "Qual desses dois jogos você prefere", 
+      enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
-    "Forza Horizongit", 
-    "Grad Theft Auto V"
-]
+     { 
+      text: "FIFA/EA Sports FC", 
+      afirmacao: "afirmacao"
     },
-    {
-      enunciado: "Qual desses dois jogos você prefere", 
-   alternativas:[
-    "FIFA/EA Sports FC", 
-    "Valorant"
+     { 
+      text: "Valorant", 
+      afirmacao: "afirmacao"
+    } 
+    
 ]
      }
 ];
