@@ -1,6 +1,6 @@
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
-const caixaAlternativas = document.querySelector(".caixa-alternativa");
+const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
@@ -10,11 +10,11 @@ const perguntas =[
    alternativas:[
    
     {
-      text:  "Minecraft",
+      texto:  "Minecraft",
       afirmacao: "afirmacao"
     },
     { 
-      text: "Fortnite", 
+      texto: "Fortnite", 
       afirmacao: "afirmacao"
     }
 ]
@@ -22,11 +22,11 @@ const perguntas =[
    {
      enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
-     {text:  "Roblox",
+     {texto:  "Roblox",
       afirmacao: "afirmacao"
       },
       { 
-      text: "Among us", 
+      texto: "Among us", 
       afirmacao: "afirmacao"
     }
 ]
@@ -35,11 +35,11 @@ const perguntas =[
      enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
      { 
-      text: "Call Of Dutty", 
+      texto: "Call Of Dutty", 
       afirmacao: "afirmacao"
     },
     { 
-      text: "Free Fire", 
+      texto: "Free Fire", 
       afirmacao: "afirmacao"
     }
 ]
@@ -48,11 +48,11 @@ const perguntas =[
       enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
     { 
-      text: "Legue Of Legends", 
+      texto: "Legue Of Legends", 
       afirmacao: "afirmacao"
     },
      { 
-      text: "Mobile Legends", 
+      texto: "Mobile Legends", 
       afirmacao: "afirmacao"
     }
 ]
@@ -61,11 +61,11 @@ const perguntas =[
       enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
      { 
-      text: "Crash Bandicoot", 
+      texto: "Crash Bandicoot", 
       afirmacao: "afirmacao"
     },
     { 
-      text: "Cuphead", 
+      texto: "Cuphead", 
       afirmacao: "afirmacao"
     }
 ]
@@ -74,11 +74,11 @@ const perguntas =[
       enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
      { 
-      text: "Candy Crush Saga", 
+      texto: "Candy Crush Saga", 
       afirmacao: "afirmacao"
     }, 
      { 
-      text: "The Sims", 
+      texto: "The Sims", 
       afirmacao: "afirmacao"
     }
 ]
@@ -87,11 +87,11 @@ const perguntas =[
       enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
      { 
-      text: "Mortal Combat", 
+      texto: "Mortal Combat", 
       afirmacao: "afirmacao"
     },
      { 
-      text: "Street Fighter", 
+      texto: "Street Fighter", 
       afirmacao: "afirmacao"
     }
   ]
@@ -100,24 +100,11 @@ const perguntas =[
       enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
      { 
-      text: "Super Mario Bros", 
+      texto: "Super Mario Bros", 
       afirmacao: "afirmacao"
     },
      { 
-      text: "Sonic The Hedgehog", 
-      afirmacao: "afirmacao"
-    }
-]
-    },
-    {
-      enunciado: "Qual desses dois jogos você prefere?", 
-   alternativas:[
-     { 
-      text: "Forza Horizon", 
-      afirmacao: "afirmacao"
-    },
-     { 
-      text: "Grad Theft Auto V/GTA", 
+      texto: "Sonic The Hedgehog", 
       afirmacao: "afirmacao"
     }
 ]
@@ -126,11 +113,24 @@ const perguntas =[
       enunciado: "Qual desses dois jogos você prefere?", 
    alternativas:[
      { 
-      text: "FIFA/EA Sports FC", 
+      texto: "Forza Horizon", 
       afirmacao: "afirmacao"
     },
      { 
-      text: "Valorant", 
+      texto: "Grad Theft Auto V/GTA", 
+      afirmacao: "afirmacao"
+    }
+]
+    },
+    {
+      enunciado: "Qual desses dois jogos você prefere?", 
+   alternativas:[
+     { 
+      texto: "FIFA/EA Sports FC", 
+      afirmacao: "afirmacao"
+    },
+     { 
+      texto: "Valorant", 
       afirmacao: "afirmacao"
     } 
     
@@ -144,13 +144,18 @@ let perguntaAtual;
 function mostraPergunta(){
   perguntaAtual = perguntas[atual];
   caixaPerguntas.textContent = perguntaAtual.enunciado;
+  mostraAlternativas();
 }
+
 function mostraAlternativas(){
   for(const alternativa of perguntaAtual.alternativas){
       const botaoAlternativa = document.createElement("button");
-      botaoAlternativa.textContent = alternativa.textoResultado
+      botaoAlternativa.textContent = alternativa.texto;
+      botaoAlternativa.addEventListener("click", function(){
+        atual++;
+        mostraPergunta();
+      })
       caixaAlternativas.appendChild(botaoAlternativa);
-      mostraAlternativas();
   }
 }
 mostraPergunta();
