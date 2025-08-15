@@ -6,71 +6,73 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 cosnt perguntas =[
     {
-     enunciado: "Pergunta 1", 
+     enunciado: "Qual desses dois jogos você prefere", 
    alternativas:[
-    "Alternativa 1", 
-    "Alternativa 2"
+    "Minecraft", 
+    "Fortinite"
 ]
    },
    {
-     enunciado: "Pergunta 2", 
+     enunciado: "Qual desses dois jogos você prefere", 
    alternativas:[
-    "Alternativa 1", 
-    "Alternativa 2"
+    "Roblox", 
+    "Among us"
 ]
     },
     {
-     enunciado: "Pergunta 3", 
+     enunciado: "Qual desses dois jogos você prefere", 
    alternativas:[
-    "Alternativa 1", 
-    "Alternativa 2"
+    "Call of Duty", 
+    "Free Fire"
 ]
     },
     {
-      enunciado: "Pergunta 4", 
+      enunciado: "Qual desses dois jogos você prefere", 
    alternativas:[
-    "Alternativa 1", 
-    "Alternativa 2"
+    "Legue Of Legends", 
+    "Mobile Legends"
 ]
     },
     {
-      enunciado: "Pergunta 5", 
+      enunciado: "Qual desses dois jogos você prefere", 
    alternativas:[
-    "Alternativa 1", 
-    "Alternativa 2"
+    "Crash Bandicoot", 
+    "Cuphead"
 ]
     },
     {
-      enunciado: "Pergunta 6", 
+      enunciado: "Qual desses dois jogos você prefere", 
    alternativas:[
-    "Alternativa 1", 
-    "Alternativa 2"]
-    },
-    {
-      enunciado: "Pergunta 7", 
-   alternativas:[
-    "Alternativa 1", 
-    "Alternativa 2"
+    "Candy Crush Saga", 
+    "The Sims"
 ]
     },
     {
-      enunciado: "Pergunta 8", 
+      enunciado: "Qual desses dois jogos você prefere", 
    alternativas:[
-    "Alternativa 1", 
-    "Alternativa 2"]
-    },
-    {
-      enunciado: "Pergunta 9", 
-   alternativas:[
-    "Alternativa 1", 
-    "Alternativa 2"
+    "Mortal Combat", 
+    "Street Fighter"
 ]
     },
     {
-      enunciado: "Pergunta 10", 
+      enunciado: "Qual desses dois jogos você prefere", 
    alternativas:[
-    "Alternativa 1", 
-    "Alternativa 2"
+    "Super Mario Bros", 
+    "Sonic the Hedgehog"
+]
+    },
+    {
+      enunciado: "Qual desses dois jogos você prefere", 
+   alternativas:[
+    "Forza Horizongit", 
+    "Grad Theft Auto V"
+]
+    },
+    {
+      enunciado: "Qual desses dois jogos você prefere", 
+   alternativas:[
+    "FIFA/EA Sports FC", 
+    "Valorant"
 ]
      }
 ];
