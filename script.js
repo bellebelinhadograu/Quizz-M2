@@ -129,37 +129,48 @@ const perguntas =[
       texto: "FIFA/EA Sports FC", 
       afirmacao: "afirmacao"
     },
-     { 
+    { 
       texto: "Valorant", 
       afirmacao: "afirmacao"
-    } 
-    
-]
-     }
-];
+        },
+       ]
+     },
+   ];
 
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta(){
+  if(atual >= perguntas.length){
+    mostraResultado();
+    return;
+  }
   perguntaAtual = perguntas[atual];
   caixaPerguntas.textContent = perguntaAtual.enunciado;
+  caixaAlternativas.textContent = "";
   mostraAlternativas();
 }
 
 function mostraAlternativas(){
   for(const alternativa of perguntaAtual.alternativas){
-      const botaoAlternativa = document.createElement("button");
-      botaoAlternativa.textContent = alternativa.texto;
-      botaoAlternativa.addEventListener("click", () => respostaSelecionada(alternativa));
-      caixaAlternativas.appendChild(botaoAlternativa);
+      const botaoAlternativas = document.createElement("button");
+      botaoAlternativas.textContent = alternativa.texto;
+      botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
+      caixaAlternativas.appendChild(botaoAlternativas);
   }
 }
 function respostaSelecionada(opcaoSelecionada){
       const afirmacoes = opcaoSelecionada.afirmacoes;
-      historiaFinal = afirmacoes;
+      historiaFinal += afirmacoes + " ";
       atual++;
       mostraPergunta();
 }
+
+function mostraResultado(){
+  caixaPerguntas.textContent = "Fim do jogo!Espero que você tenha se divertido e relembrado grandes momentos do mundo dos jogos durante este quiz.Obrigado por jogar até aqui, você foi um verdadeira gamer!Até a próxima partida...e continue sempre no modo diversão!"
+  textoResultado.textContent = historiaFinal;
+  caixaAlternativas.textContent = "";
+}
+
 mostraPergunta();
